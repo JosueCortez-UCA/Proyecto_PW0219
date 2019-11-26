@@ -1,59 +1,73 @@
-div.modal.fade#login(tabindex="-1" role="dialog")
-    div.modal-dialog.modal-dialog-centered(role="document")
-        div.modal-content
-            div.modal-header
-                h5.modal-title#exampleModalLongTitle Inicio de sesión
-                button.close(type="button" data-dismiss="modal" aria-label="Close")
-                    span(aria-hidden="true") &times;
+<div id="login" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="exampleModalLongTitle" class="modal-title">Inicio de sesión</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
 
-            div.modal-body
-                div.form-group.log-form-modal
-                    label.col-form-label(for="user") Usuario
-                    input#user.form-control(type="text" placeholder="nombre usuario")
-                    br
-                    br
-                    label.col-form-label(for="password") Constraseña
-                    input#password.form-control(type="password" placeholder="************")
-                    button#login-btn.btn.btn-primary(type="button") Iniciar
-                    button.btn.btn-primary(type="button" data-toggle="modal" data-target="#signin" data-dismiss="modal") Registrarse
+            <div class="modal-body">
+                <div class="form-group log-form-modal">
+                    <label class="col-form-label" for="user">Usuario</label>
+                    <input id="user" class="form-control" type="text" placeholder="nombre usuario">
+                    <br>
+                    <br>
+                    <label class="col-form-label" for="password">Constraseña</label>
+                    <input id="password" class="form-control" type="password" placeholder="************">
+                    <button id="login-btn" class="btn btn-primary" type="button">Iniciar</button>
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#signin" data-dismiss="modal">Registrarse</button>
+                </div>
+            </div>
 
-            div.modal-footer
-                button.btn.btn-outline-danger(type="button" data-dismiss="modal") Cerrar
+            <div class="modal-footer">
+                <button class="btn btn-outline-danger" type="button" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-div.modal.fade#signin(tabindex="-1" role="dialog")
-    div.modal-dialog.modal-dialog-centered(role="document")
-        div.modal-content
-            div.modal-header
-                h5.modal-title#exampleModalLongTitle Registro
-                button.close(type="button" data-dismiss="modal" aria-label="Close")
-                    span(aria-hidden="true") &times;
+<div id="signin" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="exampleModalLongTitle" class="modal-title">Registro</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
 
-            div.modal-body
-                div.form-group.log-form-modal
-                    label.col-form-label(for="name") Nombre
-                    input#name.form-control(type="text" placeholder="igrese sus nombres")
-                    br
-                    label.col-form-label(for="lastname") Apellidos
-                    input#lastname.form-control(type="text" placeholder="ingrese sus apellidos")
-                    br
-                    label.col-form-label(for="email") Correo electronico
-                    input#email.form-control(type="email" placeholder="email@example.com")
-                    br
-                    label.col-form-label(for="pass1") Constraseña
-                    input#pass1.form-control(type="password1" placeholder="************")
-                    br
-                    label.col-form-label(for="pass2") Repita la constraseña
-                    input#pass2.form-control(type="password2" placeholder="************")
-                    br
-                    hr
-                    div.form-check
-                        label.form-check-label
-                            input.form-check-input(type="checkbox" value="")
-                            label Eres estudiantes de la UCA?
-                    label.col-form-label(for="carnet") Ingrese su carnet
-                    input#carnet.form-control(type="carnet" placeholder="00000000")
+            <div class="modal-body">
+                <div class="form-group log-form-modal">
+                    <label class="col-form-label" for="name">Nombre</label>
+                    <input id="name" name="name" class="form-control" type="text" placeholder="igrese sus nombres">
+                    <br>
+                    <label class="col-form-label" for="lastname">Apellidos</label>
+                    <input id="lastname" name="lastname" class="form-control" type="text" placeholder="ingrese sus apellidos">
+                    <br>
+                    <label class="col-form-label" for="email">Correo electronico</label>
+                    <input id="email" name="email" class="form-control" type="email" placeholder="email@example.com">
+                    <br>
+                    <label class="col-form-label" for="pass1">Constraseña</label>
+                    <input id="pass1" name="pass1" class="form-control" type="password" placeholder="************">
+                    <br>
+                    <label class="col-form-label" for="pass2">Repita la constraseña</label>
+                    <input id="pass2" name="pass2" class="form-control" type="password" placeholder="************">
+                    <br>
+                    <hr>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox">
+                            <label>Eres estudiantes de la UCA?</label>
+                        </label>
+                    </div>
+                    <label class="col-form-label" for="carnet">Ingrese su carnet</label>
+                    <input id="carnet" class="form-control" type="carnet" placeholder="00000000"  disabled="">
 
-                    button#signin-btn.btn.btn-primary(type="button") Registrarse
+                    <button id="signin-btn" class="btn btn-primary" type="button">Registrarse</button>
+                </div>
+            </div>
 
-            div.modal-footer
-                button.btn.btn-outline-danger(type="button" data-dismiss="modal") Cerrar
+            <div class="modal-footer">
+                <button class="btn btn-outline-danger" type="button" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
