@@ -1,0 +1,19 @@
+.log-form-modal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.log-form-modal label {
+    width: 100%;
+}
+
+.log-form-modal button {
+    width: 35%;
+    margin: 1.5rem;
+}
+
+.log-form-modal hr {
+    margin: 2rem;
+    width: 80%;
+}
