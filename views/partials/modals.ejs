@@ -1,0 +1,59 @@
+div.modal.fade#login(tabindex="-1" role="dialog")
+    div.modal-dialog.modal-dialog-centered(role="document")
+        div.modal-content
+            div.modal-header
+                h5.modal-title#exampleModalLongTitle Inicio de sesión
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+
+            div.modal-body
+                div.form-group.log-form-modal
+                    label.col-form-label(for="user") Usuario
+                    input#user.form-control(type="text" placeholder="nombre usuario")
+                    br
+                    br
+                    label.col-form-label(for="password") Constraseña
+                    input#password.form-control(type="password" placeholder="************")
+                    button#login-btn.btn.btn-primary(type="button") Iniciar
+                    button.btn.btn-primary(type="button" data-toggle="modal" data-target="#signin" data-dismiss="modal") Registrarse
+
+            div.modal-footer
+                button.btn.btn-outline-danger(type="button" data-dismiss="modal") Cerrar
+
+div.modal.fade#signin(tabindex="-1" role="dialog")
+    div.modal-dialog.modal-dialog-centered(role="document")
+        div.modal-content
+            div.modal-header
+                h5.modal-title#exampleModalLongTitle Registro
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times;
+
+            div.modal-body
+                div.form-group.log-form-modal
+                    label.col-form-label(for="name") Nombre
+                    input#name.form-control(type="text" placeholder="igrese sus nombres")
+                    br
+                    label.col-form-label(for="lastname") Apellidos
+                    input#lastname.form-control(type="text" placeholder="ingrese sus apellidos")
+                    br
+                    label.col-form-label(for="email") Correo electronico
+                    input#email.form-control(type="email" placeholder="email@example.com")
+                    br
+                    label.col-form-label(for="pass1") Constraseña
+                    input#pass1.form-control(type="password1" placeholder="************")
+                    br
+                    label.col-form-label(for="pass2") Repita la constraseña
+                    input#pass2.form-control(type="password2" placeholder="************")
+                    br
+                    hr
+                    div.form-check
+                        label.form-check-label
+                            input.form-check-input(type="checkbox" value="")
+                            label Eres estudiantes de la UCA?
+                    label.col-form-label(for="carnet") Ingrese su carnet
+                    input#carnet.form-control(type="carnet" placeholder="00000000")
+
+                    button#signin-btn.btn.btn-primary(type="button") Registrarse
+
+            div.modal-footer
+                button.btn.btn-outline-danger(type="button" data-dismiss="modal") Cerrar

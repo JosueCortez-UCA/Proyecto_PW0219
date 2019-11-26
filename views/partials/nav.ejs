@@ -1,0 +1,22 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+    a.navbar-brand(href="/") Inicio
+    button.navbar-toggler (type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+
+    div.collapse.navbar-collapse#navbarColor01
+        ul.navbar-nav.mr-auto
+            li.nav-item
+                a.nav-link(href="") Historial
+                    span.sr-only(current)
+            
+            li.nav-item
+                a.nav-link(href="/stats") Estadisticas
+            
+            li.nav-item
+                a.nav-link(href="") Gestion de cuentas
+            
+            li.nav-item
+                a.nav-link(href="") About
+            
+        form.form-inline.my-2.my-lg-0
+            a.nav-link(href="#login" data-toggle="modal") Iniciar sesión
