@@ -4,7 +4,27 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var mongoose = require('mongoose');
+var debug = require('debug')('web:database');
+
 var indexRouter = require('./routes/index');
+
+// Conect to database
+
+mongoose.connect(process.env.MONGO_URI, {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true 
+})
+  .then(() => {
+    debug("success Coneccted to database")
+  })
+  .catch((err) => {
+    debug(err);
+    process.exit(1);
+  });
+
+mongoose.set('debug',process.env.NODE_ENV === 'development');
 
 var app = express();
 
