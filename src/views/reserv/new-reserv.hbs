@@ -15,13 +15,17 @@
           <input type="text" name="horas" class="form-control" placeholder="Horas a reservar"/>
         </div>
         <div class="form-group">
-          <input type="text" name="justificacion" class="form-control" placeholder="justificacion"/>
+          <textarea type="text" name="justificacion" class="form-control" placeholder="justificacion" cols="30" rows="10"></textarea>
         </div>
         <div class="form-group">
           <input type="text" name="cantidad" class="form-control" placeholder="cantidad"/>
         </div>
         <div class="form-group">
-          <input type="text" name="tipo_reserva" class="form-control" placeholder="Tipo de reserva"/>
+          <label for="tipo_reserva"></label>
+          <select class="form-control" id="tipo_reserva" name="tipo_reserva">
+            <option>Parcial</option>
+            <option>Total</option>
+          </select>
         </div>
         <div class="form-group">
           <button class="btn btn-primary btn-block" type="submit">

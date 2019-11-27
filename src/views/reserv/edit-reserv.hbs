@@ -29,13 +29,18 @@
           <input type="text" name="horas" class="form-control" placeholder="Horas a reservar" value="{{reserv.horas}}"/>
         </div>
         <div class="form-group">
-          <input type="text" name="justificacion" class="form-control" placeholder="justificacion" value="{{reserv.justificacion}}"/>
+          <textarea type="text" name="justificacion" class="form-control" placeholder="justificacion" cols="30" rows="10">{{reserv.justificacion}}</textarea>
         </div>
         <div class="form-group">
           <input type="text" name="cantidad" class="form-control" placeholder="cantidad" value="{{reserv.cantidad}}"/>
         </div>
         <div class="form-group">
-          <input type="text" name="tipo_reserva" class="form-control" placeholder="Tipo de reserva" value="{{reserv.tipo_reserva}}"/>
+          <label for="tipo_reserva"></label>
+          <select class="form-control" id="tipo_reserva" name="tipo_reserva">
+            <option selected="true" disabled="disabled">{{reserv.tipo_reserva}}</option>
+            <option>Parcial</option>
+            <option>Total</option>
+          </select>
         </div>
 
         <div class="form-group">
