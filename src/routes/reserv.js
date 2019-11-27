@@ -13,7 +13,7 @@ router.get('/reserv/add', isAuthenticated, (req, res) => {
 });
 
 router.post('/reserv/new-reserv', isAuthenticated, async (req, res) => {
-  const {lugar, fecha_emision, fecha_remision, fecha_reserva, horas, estado, justificacion, cantidad, acuse, tipo_reserva} = req.body;
+  const {lugar, fecha_emision, fecha_reserva, horas, estado, justificacion, cantidad, tipo_reserva} = req.body;
   const errors = [];
   if (!lugar) {
     errors.push({text: 'Por favor, indique el aula.'});
@@ -55,6 +55,9 @@ router.post('/reserv/new-reserv', isAuthenticated, async (req, res) => {
   } else {
     const newReserv = new Reserv({lugar, fecha_emision, fecha_reserva, horas, estado, justificacion, cantidad, tipo_reserva});
     newReserv.user = req.user.id;
+    newReserv.fecha_emision = "10/10/10";
+    newReserv.fecha_remision = null;
+    newReserv.acuse = null;
     await newReserv.save();
     req.flash('success_msg', 'Solicitud de reserva enviada con éxito');
     res.redirect('/reserv');
