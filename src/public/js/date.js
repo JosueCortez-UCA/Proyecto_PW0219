@@ -1,6 +1,5 @@
 $(function () {
-    $.datepicker.setDefaults($.datepicker.regional["es"]);
-    $("#datepicker").datepicker({
-        firstDay: 1
+    $(function () {
+        $("#datepicker").datepicker();
     });
 });
