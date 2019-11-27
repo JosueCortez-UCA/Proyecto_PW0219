@@ -13,22 +13,16 @@ router.get('/reserv/add', isAuthenticated, (req, res) => {
 });
 
 router.post('/reserv/new-reserv', isAuthenticated, async (req, res) => {
-  const {lugar, fecha_emision, fecha_reserva, horas, estado, justificacion, cantidad, tipo_reserva} = req.body;
+  const {lugar, fecha_reserva, horas, justificacion, cantidad, tipo_reserva} = req.body;
   const errors = [];
   if (!lugar) {
     errors.push({text: 'Por favor, indique el aula.'});
-  }
-  if (!fecha_emision) {
-    errors.push({text: 'Por favor, indique la fecha de emisión'});
   }
   if (!fecha_reserva) {
     errors.push({text: 'Por favor, indique la fecha de la solicitud'});
   }
   if (!horas) {
     errors.push({text: 'Por favor, indique cuantas hora'});
-  }
-  if (!estado) {
-    errors.push({text: 'Por favor, indique el estado de la solicitud'});
   }
   if (!justificacion) {
     errors.push({text: 'Por favor, indique el motivo de la solicitud'});
@@ -44,18 +38,17 @@ router.post('/reserv/new-reserv', isAuthenticated, async (req, res) => {
     res.render('reserv/new-reserv', {
       errors,
       lugar,
-      fecha_emision,
       fecha_reserva,
       horas,
-      estado,
       justificacion,
       cantidad,
       tipo_reserva
     });
   } else {
-    const newReserv = new Reserv({lugar, fecha_emision, fecha_reserva, horas, estado, justificacion, cantidad, tipo_reserva});
+    const newReserv = new Reserv({lugar, fecha_reserva, horas, justificacion, cantidad, tipo_reserva});
     newReserv.user = req.user.id;
-    newReserv.fecha_emision = "10/10/10";
+    newReserv.estado = 'Reservado';
+    newReserv.fecha_emision = new Date();
     newReserv.fecha_remision = null;
     newReserv.acuse = null;
     await newReserv.save();
@@ -81,8 +74,8 @@ router.get('/reserv/edit/:id', isAuthenticated, async (req, res) => {
 });
 
 router.put('/reserv/edit-reserv/:id', isAuthenticated, async (req, res) => {
-  const {lugar, fecha_emision, fecha_reserva, horas, estado, justificacion, cantidad, tipo_reserva} = req.body;
-  await Reserv.findByIdAndUpdate(req.params.id, {lugar, fecha_emision, fecha_reserva, horas, estado, justificacion, cantidad, tipo_reserva});
+  const {lugar, fecha_reserva, horas, justificacion, cantidad, tipo_reserva} = req.body;
+  await Reserv.findByIdAndUpdate(req.params.id, {lugar, fecha_reserva, horas, justificacion, cantidad, tipo_reserva});
   req.flash('success_msg', 'Solicitud modificada con éxito');
   res.redirect('/reserv');
 });
