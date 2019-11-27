@@ -18,7 +18,7 @@ const ReservSchema = new Schema({
     required: true
   },
   horas: {
-    type: Number,
+    type: String,
     required: true
   },
   estado: {
