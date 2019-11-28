@@ -1,0 +1,40 @@
+#grupo-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#grupo-info label {
+    width: 50%;
+}
+
+#grupo-info input[type="text"] {
+    width: 35%;
+}
+
+hr#grup-info {
+    width: 80%;
+    margin: 35px;
+}
+
+h3#grup-info {
+    text-align: center;
+    margin: 35px;
+}
+
+.info-labos-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.info-labos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.info-labos>label {
+    width: 50%;
+}
