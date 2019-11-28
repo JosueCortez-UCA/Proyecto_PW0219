@@ -1,42 +1,26 @@
-<div class="card-body">
-    <div class="form-group" id="grupo-info">
-      <label class="col-form-label">Número de instructores</label>
-      <label class="col-form-label">Cantidad de laboratorios</label>
-      <input type="text" class="form-control" placeholder="Número de instructores" id="n_instructores" disabled="">
-      <input type="text" class="form-control" placeholder="Número de laboratorios" id="n_labs" disabled="">
-
-      <hr id="grup-info">
-
-      <label class="col-form-label">Solicitudes aprobadas</label>
-      <label class="col-form-label">Solicitudes denegadas</label>
-      <input type="text" class="form-control" placeholder="Solicitudes aprobadas" id="n_soli_apro" disabled="">
-      <input type="text" class="form-control" placeholder="Solicitudes denegadas" id="n_soli_dene" disabled="">
-  </div>
-</div>
-
 <h3 id="grup-info">ESTÁDISTICAS POR LABORATORIO</h3>
 
-{{#each labs}}
+{{#each reserv}}
   <div class="jumbotron">
     <div class="info-labos-titulo">
-      <h4 class="display-4">Laboratorio</h4>
-      <p class="lead">Activo</p>
+      <h4 class="display-4">{{ lugar }}</h4>
+      <p class="lead">activo</p>
     </div>
     <hr class="my-4">
 
     <div class="info-labos">
       <label>Media de equipos usuados</label>
-      <label>numero!</label>
+      <label>numero 3</label>
 
       <br>
 
       <label>Horas de uso medio</label>
-      <label>numero!</label>
+      <label>numero 2</label>
 
       <br>
 
       <label>Cabtidad de alumnos atendidos</label>
-      <label>numero!</label>
+      <label>numero 1</label>
     </div>
   </div>
 {{/each}}

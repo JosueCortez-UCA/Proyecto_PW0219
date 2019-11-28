@@ -3,12 +3,10 @@ const { Schema } = mongoose;
 
 const LabSchema = new Schema({
   nombre: {
-    type: String,
-    required: true
+    type: String
   },
   capacidad: {
-    type: String,
-    required: true
+    type: String
   },
   habilitado: {
     type: String
