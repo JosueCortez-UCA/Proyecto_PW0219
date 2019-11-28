@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
@@ -7,10 +8,11 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const morgan = require('morgan');
 
-// Initializations
-const app = express();
 require('./database');
 require('./config/passport');
+
+// Initializations
+const app = express();
 
 // settings
 app.set('port', process.env.PORT || 4000);
