@@ -8,3 +8,9 @@
 * **Carlos Víctor Zaun Gómez** - *00403218* - [VZ0417](https://github.com/VZ0417)
 
 También puedes ver la lista desde los [Colaboradores](https://github.com/JosueCortez-UCA/Proyecto_PW0219/settings/collaboration) en este proyecto.
+
+
+## Enlaces 📌
+
+* **Aplicacion montada** [Heroku](https://proyecto-pw0219.herokuapp.com/)
+* **Tablero** [Trello](https://trello.com/b/9MHZc1t6/proyecto-web)
