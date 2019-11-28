@@ -3,11 +3,14 @@ const router = express.Router();
 
 // Models
 const Reserv = require('../models/Reserv');
+const User = require('../models/User');
 
-// Get de todas las solicitudes
 router.get('/stats', async (req, res) => {
-  const reserv = await Reserv.find();
-  res.render('stats/all-stats', { reserv });
+  Reserv.find({}, function(err, reservas) {
+    User.populate(reservas, {path: "user"},function(err, reservas){
+        res.render('stats/all-stats', { reservas });
+      }); 
+  });
 });
 
 module.exports = router;

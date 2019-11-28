@@ -1,17 +1,23 @@
 <h3 id="grup-info">Todas las reservas</h3>
 
-{{#each reserv}}
+{{#each reservas}}
   <div class="jumbotron">
     <div class="info-labos-titulo">
       <h4 class="display-4">{{ lugar }}</h4>
       <p class="lead">{{ tipo_reserva }}</p>
     </div>
+    <p class="lead" id="quien">{{ user.email }}</p>
     <hr class="my-4">
 
     <div class="info-labos">
+      <strong>Horas a usar:</strong>
+      <label>{{ horas }}</label>
+      
+      <label id="salto"></label>
+      
       <strong>Equipos solicitados: </strong>
       <label>{{ cantidad }}</label>
-      
+
       <label id="salto"></label>
 
       <strong>Justificación:</strong>
