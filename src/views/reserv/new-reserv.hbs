@@ -6,7 +6,13 @@
     <div class="card-body">
       <form action="/reserv/new-reserv" method="POST">
         <div class="form-group">
-          <input type="text" name="lugar" class="form-control" placeholder="Lugar" autofocus/>
+          <select class="form-control" id="lugar" name="lugar">
+            <option>Laboratorio 1</option>
+            <option>Laboratorio 2</option>
+            <option>Laboratorio 3</option>
+            <option>Laboratorio 4</option>
+            <option>Laboratorio 5</option>
+          </select>
         </div>
         <div class="form-group">
           <input id="datepicker" type="text" name="fecha_reserva" class="form-control" placeholder="12/12/2018 - ddmmyy"/>
@@ -21,7 +27,6 @@
           <input type="text" name="cantidad" class="form-control" placeholder="cantidad"/>
         </div>
         <div class="form-group">
-          <label for="tipo_reserva"></label>
           <select class="form-control" id="tipo_reserva" name="tipo_reserva">
             <option>Parcial</option>
             <option>Total</option>
