@@ -31,10 +31,13 @@ h3#grup-info {
 .info-labos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
 }
 
 .info-labos>label {
-    width: 50%;
+    width: 15%;
+    margin-left: 15px;
+}
+
+#salto {
+    width: 100%;
 }
